@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Xform-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      form
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="tela-login">
+      <h1>Login</h1>
+      <input type="text" placeholder="Usuario" id="login" />
+      <br /><br />
+      <input type="password" placeholder="senha" id="senha" />
+      <br /><br />
+      <div class="botao">
+        <button onclick="logar()">Login</button>
+
+        <button onclick="direcionar()">Cadastrar</button>
+      </div>
+      <div id="erro"></div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>
