@@ -1,4 +1,4 @@
-{%load static %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt_BR">
 <head>
@@ -24,35 +24,45 @@
                         <path d="M18.75 22.9167C23.3523 22.9167 27.0833 19.1857 27.0833 14.5833C27.0833 9.98096 23.3523 6.25 18.75 6.25C14.1476 6.25 10.4166 9.98096 10.4166 14.5833C10.4166 19.1857 14.1476 22.9167 18.75 22.9167Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M45.8334 43.75V39.5833C45.832 37.7369 45.2174 35.9433 44.0862 34.484C42.955 33.0247 41.3711 31.9824 39.5834 31.5208" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M33.3334 6.52084C35.1259 6.9798 36.7147 8.0223 37.8493 9.48399C38.9839 10.9457 39.5997 12.7434 39.5997 14.5938C39.5997 16.4441 38.9839 18.2418 37.8493 19.7035C36.7147 21.1652 35.1259 22.2077 33.3334 22.6667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
+                    </svg>
                 </div>
 
                 <div class="logged_in_user">
                     <h1>SGE</h1>
                 </div>
+                <form method="post" action="{% url 'login_funcionario' %}">
+                    {% csrf_token %}
+                    <div class="input_1">
+                        <p>Email</p>
+                        <input type="text" name="username" id="Email" required>
+                    </div>
 
-                <div class="input_1">
-                    <p>Email</p>
-                    <input type="text" name="Email" id="Email">
-                </div>
+                    <div class="input_2">
+                        <p>Senha</p>
+                        <input type="password" name="password" id="Senha" required>
+                    </div>
 
-                <div class="input_2">
-                    <p>Senha</p>
-                    <input type="password" name="Senha" id="Senha">
-                </div>
+                    <div class="help">
+                        <p>Esqueceu sua senha?</p>
+                    </div>
 
-                <div class="help">
-                    <p>Esqueceu sua senha?</p>
-                </div>
-
-                <a href="management.html" class="button">Entrar</a>
-                
+                    <button type="submit" class="button">Entrar</button>
+                </form>
                 <div class="cadastrar">
-                    <p>Não possui conta?<span>Cadastre-se agora</p></span>
+                  <p>Não possui conta? <span><a href="{% url 'redirecionar_registro_Funcioario' %}">Cadastre-se agora</a></span></p>
                 </div>
                 
             </div>
         </section>
+        <div class="error-message">
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
     </main>
+     
 </body>
 </html>

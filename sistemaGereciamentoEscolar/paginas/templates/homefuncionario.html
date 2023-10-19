@@ -1,0 +1,207 @@
+{% load static %}
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Início</title>
+
+    <link rel="stylesheet" href="{% static "css/homefun/style.css" %}" />
+  </head>
+  <body>
+    <header id="header_one">
+      <h1>SGE</h1>
+      <div class="icon_menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="45"
+          height="45"
+          viewBox="0 0 45 45"
+          fill="none"
+        >
+          <path
+            d="M7.5 22.5H37.5"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M7.5 11.25H37.5"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M7.5 33.75H37.5"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <div class="avatar">
+        <img src="{% static "imagens/Ellipse.png" %}" alt="" />
+      </div>
+    </header>
+
+    <main>
+      <div class="main_menu">
+        <div class="group1">
+          <div class="avatar">
+            <img src="{% static "imagens/Ellipse.png" %}" alt="" />
+          </div>
+          <h2>Olá, Luís</h2>
+          <h3>Online</h3>
+        </div>
+        <div class="menu">
+          <ul class="grid">
+            <li>
+              <a class="item" id="select" href="homeEmployee.html"
+                >Área do Professor</a
+              >
+            </li>
+            <li><a class="item" href="management.html">Coordenação</a></li>
+            <li><a class="item" href="{% url 'custom_logout' %}">Sair</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="section_menu">
+        <div class="grid_menu">
+          <a href="" class="item"
+            ><img src="icon/sticky-note.png" alt="" />Cadastrar Nota</a
+          >
+          <a href="" class="item"
+            ><img src="icon/table-2.png" alt="" />Cadastrar Frequência</a
+          >
+          <a href="" class="item"
+            ><img src="icon/clock-4.png" alt="" />Cadastrar Horário</a
+          >
+          <a href="" class="item"
+            ><img src="icon/users.png" alt="" />Cadastrar Turma</a
+          >
+          <a href="" class="item"
+            ><img src="icon/newspaper.png" alt="" />Cadastrar Notícia</a
+          >
+          <a href="" class="item"
+            ><img src="icon/sticky-note.png" alt="" />Cadastrar Atividades</a
+          >
+        </div>
+      </section>
+
+      <section class="section_planning" id="section">
+        <div class="titlle">
+          <div class="Rectangle_01">
+            <h3>Planejamentos</h3>
+          </div>
+        </div>
+
+        <div class="date" id="column">
+          <div class="rectangle">
+            <h4>Data</h4>
+            <img src="icon/chevron-down.png" alt="" />
+          </div>
+
+          <div class="column">
+            <a href="" class="item">02/08/2023</a>
+            <a href="" class="item">02/08/2023</a>
+            <a href="" class="item">02/08/2023</a>
+            <a href="" class="item">02/08/2023</a>
+            <a href="" class="item">02/08/2023</a>
+            <a href="" class="item">02/08/2023</a>
+            <a href="" class="item">02/08/2023</a>
+          </div>
+        </div>
+
+        <div class="matter" id="column">
+          <div class="rectangle">
+            <h4>Matéria</h4>
+            <img src="icon/chevron-down.png" alt="" />
+          </div>
+
+          <div class="column">
+            <a href="" class="item">Matemática</a>
+            <a href="" class="item">Matemática</a>
+            <a href="" class="item">Matemática</a>
+            <a href="" class="item">Matemática</a>
+            <a href="" class="item">Matemática</a>
+            <a href="" class="item">Matemática</a>
+            <a href="" class="item">Matemática</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section_classes" id="section">
+        <div class="titlle">
+          <div class="Rectangle_01">
+            <h3>Minhas Turmas</h3>
+          </div>
+        </div>
+
+        <input type="text" />
+        <div class="search">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <g opacity="0.5">
+              <path
+                d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M14 14L11.1 11.1"
+                stroke="black"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+          </svg>
+        </div>
+
+        <div class="classes">
+          <a href="" class="turma">6º ANO "A"</a>
+          <a href="" class="turma">6º ANO "B"</a>
+          <a href="" class="turma">6º ANO "C"</a>
+          <a href="" class="turma">7º ANO "A"</a>
+          <a href="" class="turma">7º ANO "B"</a>
+          <a href="" class="turma">7º ANO "C"</a>
+          <a href="" class="turma">8º ANO "A"</a>
+          <a href="" class="turma">8º ANO "B"</a>
+          <a href="" class="turma">8º ANO "C"</a>
+          <a href="" class="turma">9º ANO "A"</a>
+          <a href="" class="turma">9º ANO "B"</a>
+          <a href="" class="turma">9º ANO "C"</a>
+        </div>
+
+        <!-- <div class="shadow"></div> -->
+      </section>
+
+      <section class="section_News" id="section">
+        <img src="imagens/computador_portátil.jpg" alt="computador portátil" />
+
+        <div class="titlle">
+          <div class="Rectangle_01"><h3>Notícias</h3></div>
+        </div>
+
+        <div class="Rectangle_02">
+          <h5>Semana pedagógica</h5>
+        </div>
+
+        <a class="View_more" href="#">Ver mais</a>
+      </section>
+      <div class="section">
+        <img src="imagens/Logo-SistemaDeEnsino.png" alt="" />
+      </div>
+    </main>
+  </body>
+</html>

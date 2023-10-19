@@ -1407,3 +1407,27 @@ span{
     top: 140px;
     left: 508px;
 }
+.error-message {
+    /* Cor de fundo vermelha (pode ajustar a cor conforme necessário) */
+    color: #ff0000;
+    /* Cor do texto branco para contrastar com o fundo */
+    padding: 10px;
+    /* Espaçamento interno para as mensagens */
+    border: 1px solid #ff0000;
+    /* Borda vermelha */
+    margin: 10px 0;
+    /* Espaçamento entre a mensagem de erro e outros elementos */
+    text-align: center;
+    /* Centralizar o texto */
+}
+
+/* Estilo para as mensagens dentro da div */
+.error-message .messages {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.error-message .messages li {
+    font-weight: bold;
+}

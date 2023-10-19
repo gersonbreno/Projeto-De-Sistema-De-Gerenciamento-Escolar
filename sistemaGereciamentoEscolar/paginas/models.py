@@ -7,6 +7,7 @@ class Usuario(models.Model):
     cpf = models.CharField(max_length=14, unique=True)
     endereco = models.TextField()
     telefone = models.CharField(max_length=15)
+    email = models.EmailField(default='example@example.com')
     data_nascimento = models.DateField(default='2000-01-01')
     genero_choices = (
         ('M', 'Masculino'),

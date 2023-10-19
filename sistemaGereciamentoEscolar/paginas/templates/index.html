@@ -12,9 +12,10 @@
       <img src="{%    static   "imagens/Sala_de_Aula.jpg" %}" alt="" />
 
       <div class="access">
-        <a href="login.html" class="access_01" id="access">
+        <a href="{% url 'redirecionar_login_funcionario' %}" class="access_01" id="access">
           <h1>SGE</h1>
           <p>Acesso para: Admnistração, Escola, Coordenação e Professores.</p>
+          
         </a>
 
         <a href="{% url 'redirecionar_login'%}" class="access_02" id="access">
@@ -27,7 +28,7 @@
           <p>Acesso para: Pais e Alunos.</p>
         </a>
 
-        <a href="login.html" class="access_04" id="access">
+        <a href="{% url 'redirecionar_login_funcionario' %}" class="access_04" id="access">
           <h1>Renovação de Matrícula</h1>
           <p>Acesso para: Pais e Alunos.</p>
         </a>
