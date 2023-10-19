@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/loginAluno/style.css' %}" />
+</head>
+
+<body>
+    <main>
+        <section class="section_login" id="login">
+            <div class="container">
+                <div class="logo">
+                    <h1>SGE</h1>
+                    <h2>Sistema de Gerenciamento Escolar</h2>
+                </div>
+
+                <form method="post" action="{% url 'login_student' %}">
+                    {% csrf_token %}
+                    <div class="input_1">
+                        <label for="username">Nome de Usuário:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+
+                    <div class="input_2">
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <button type="submit" class="button">Entrar</button>
+                </form>
+
+                <div class="help">
+                    <p>Esqueceu sua senha?</p>
+                </div>
+
+                <div class="cadastrar">
+                    <p>Não possui conta? <span>Cadastre-se agora</span></p>
+                </div>
+            </div>
+        </section>
+        <div class="error-message">
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</div>
+    </main>
+</body>
+</html>

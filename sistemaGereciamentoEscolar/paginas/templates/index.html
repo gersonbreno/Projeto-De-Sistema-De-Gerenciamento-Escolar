@@ -1,32 +1,40 @@
 {% load static %}
-
-<!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt_BR">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="Xform-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-      form
-    />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal</title>
+
+    <link rel="stylesheet" href="{% static "css/index/style.css" %}" />
   </head>
   <body>
-    <div class="tela-login">
-      <h1>Login</h1>
-      <input type="text" placeholder="Usuario" id="login" />
-      <br /><br />
-      <input type="password" placeholder="senha" id="senha" />
-      <br /><br />
-      <div class="botao">
-        <button onclick="logar()">Login</button>
+    <main class="index">
+      <img src="{%    static   "imagens/Sala_de_Aula.jpg" %}" alt="" />
 
-        <button onclick="direcionar()">Cadastrar</button>
+      <div class="access">
+        <a href="login.html" class="access_01" id="access">
+          <h1>SGE</h1>
+          <p>Acesso para: Admnistração, Escola, Coordenação e Professores.</p>
+        </a>
+
+        <a href="{% url 'redirecionar_login'%}" class="access_02" id="access">
+          <h1>Portal do Aluno</h1>
+          <p>Acesso para: Pais e Alunos.</p>
+        </a>
+
+        <a href="{% url 'redirecionar_registro_Aluno' %}" class="access_03" id="access">
+          <h1>Realizar Matrícula</h1>
+          <p>Acesso para: Pais e Alunos.</p>
+        </a>
+
+        <a href="login.html" class="access_04" id="access">
+          <h1>Renovação de Matrícula</h1>
+          <p>Acesso para: Pais e Alunos.</p>
+        </a>
       </div>
-      <div id="erro"></div>
-    </div>
-    <script src="login.js"></script>
+    </main>
+
+    <!-- main js -->
+    <script src="{% static "js/main.js" %}"></script>
   </body>
 </html>

@@ -1,0 +1,85 @@
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header id="header_one">
+        <h1>SGE</h1>
+        <div class="icon_menu"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+            <path d="M7.5 22.5H37.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7.5 11.25H37.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7.5 33.75H37.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg></div>
+        <div class="avatar"><img src="imagens/Ellipse.png" alt=""></div>
+    </header>
+
+    <main>
+        <div class="main_menu">
+            <div class="group1">
+                <div class="avatar"><img src="imagens/Ellipse.png" alt=""></div>
+                <h2>Olá, Luís</h2>
+                <h3>Online</h3>
+            </div>
+            <div class="menu">
+                <ul class="grid">
+                    <li><a class="item" href="homeEmployee.html">Área do Professor</a></li>
+                    <li><a class="item" id="select" href="management.html">Coordenação</a></li>
+                    <li><a class="item" href="index.html">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="section_menu">
+            <div class="grid_menu">
+                <a href="registerStudent.html" class="item"><img src="icon/user.png" alt="">Cadastrar Aluno</a>
+                <a href="" class="item"><img src="icon/clipboard-list.png" alt="">Cadastrar Cardápio</a>
+                <a href="" class="item"><img src="icon/newspaper.png" alt="">Solicitações de Matricula</a>
+                <a href="" class="item"><img src="icon/clock-4.png" alt="">Controle de Mensalidade</a>
+                <a href="RegisterEmployee.html" class="item"><img src="icon/users.png" alt="">Cadastrar Funcionário</a>
+                <a href="" class="item"><img src="icon/table-2.png" alt="">Cadastrar Notícia</a>
+            </div>
+        </section>
+
+        <section class="section_schedules" id="section">
+            <div class="titlle">
+                    <h3>Horários</h3>
+            </div>
+
+            <div class="carousel-container">
+                <div class="AllDayEvent">
+                  <div class="day">Domingo 08/10/2023</div>
+                  <div class="day">Segunda-feira 09/10/2023</div>
+                </div>
+                <button class="next-button" onclick="moveCarousel(1)">&#9654;</button>
+              </div>
+
+              <div class="column">
+                <input type="text" class="text">
+                <input type="text" class="text">
+            </div>
+              
+              <div class="column_2">
+                <input type="text" class="text">
+                <input type="text" class="text">
+            </div>
+
+
+              
+        </section>
+
+    </section>
+    <div class="section">
+        <img src="imagens/Logo-SistemaDeEnsino.png" alt="">
+    </div>
+</main>
+
+    <!-- main js -->
+    <script src="main.js"></script>
+
+</body>
+</html>

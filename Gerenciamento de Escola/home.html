@@ -1,0 +1,158 @@
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header id="header_one">
+        <h1>SGE</h1>
+        <div class="icon_menu"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+            <path d="M7.5 22.5H37.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7.5 11.25H37.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7.5 33.75H37.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg></div>
+        <h1 class="titlle">SGE - Sistema de Gerenciamento Escolar</h1>
+        <div class="avatar"><img src="imagens/Ellipse.png" alt=""></div>
+    </header>
+
+    <main>
+      <div class="main_menu">
+        <div class="group1">
+            <div class="avatar"><img src="imagens/Ellipse.png" alt=""></div>
+            <h2>Olá, fulano</h2>
+            <h3>Online</h3>
+        </div>
+        <div class="menu">
+            <ul class="grid">
+              <li><a class="item" href="home.html">Início</a></li>
+              <li><a class="item" href="">Realizar Rematrícula</a></li>
+              <li><a class="item" href="">Frequência</a></li>
+              <li><a class="item" href="">Notas</a></li>
+              <li><a class="item" href="">Participantes da Turma</a></li>
+              <li><a class="item" href="index.html">Sair</a></li>
+            </ul>
+          </div>
+      </div>
+
+      <section class="section_tarefa" id="section">
+        <img src="imagens/jornal.jpg" alt="computador tablet branco em cima do jornal">
+        
+        <div class="titlle">
+          <div class="Rectangle_01"><h3>Tarefas cadastradas</h3></div>
+        </div>
+        
+        
+        <div class="Rectangle_02"></div>
+        <div class="disciplina">
+          <h4>Historia</h4>
+          <h5>Exercício: Ler e responder questões das páginas 5 à 15....</h5> 
+        </div>
+
+        <div class="date_calendar">
+          <div class="calendar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="32" viewBox="0 0 27 32" fill="none">
+          <path d="M21.2786 5.26398H5.59962C4.36259 5.26398 3.35977 6.44236 3.35977 7.89598V26.32C3.35977 27.7736 4.36259 28.952 5.59962 28.952H21.2786C22.5156 28.952 23.5184 27.7736 23.5184 26.32V7.89598C23.5184 6.44236 22.5156 5.26398 21.2786 5.26398Z" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17.9188 2.63202V7.89602" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8.95941 2.63202V7.89602" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3.35977 13.16H23.5184" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8.95941 18.424H8.97061" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13.4391 18.424H13.4503" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17.9188 18.424H17.93" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8.95941 23.688H8.97061" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13.4391 23.688H13.4503" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17.9188 23.688H17.93" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg></div>
+          <h5>A tarefa é para ser entregue até o dia 12/10/2023</h5>
+        </div>
+
+        <a class="View_more" href="#">Ver mais</a>
+      </section>
+
+      <section class="section_horario" id="section">
+        <div class="titlle">
+          <div class="Rectangle_01"><h3>Horário</h3></div>
+        </div>
+
+        <div class="carousel-container">
+          <div class="AllDayEvent">
+            <div class="day">Domingo 08/10/2023</div>
+            <div class="day">Segunda-feira 09/10/2023</div>
+            <div class="day">Terça-feira 10/10/2023</div>
+            <div class="day">Quarta-feira 11/10/2023</div>
+            <div class="day">Quinta-feira 12/10/2023</div>
+            <div class="day">Sexta-feira 13/10/2023</div>
+            <div class="day">Sabado-feira 14/10/2023</div>
+          </div>
+          <button class="next-button" onclick="moveCarousel(1)">&#9654;</button>
+        </div>
+
+        <div class="events">
+          <div class="event">
+            <div class="Rectangle">
+              <h3>7:00 AM as 8:30 AM</h3>
+              <h2>Geografia</h2>
+              <h2>ALYSSON FILGUEIRA</h2>
+            </div>
+          </div>
+
+          <div class="event">
+            <div class="Rectangle">
+              <h3>8:30 AM as 10:00 AM</h3>
+              <h2>Biologia</h2>
+              <h2>LAYSA MABEL</h2>
+            </div>
+          </div>
+            
+          <div class="event">
+            <div class="Rectangle">
+              <h3>10:30 AM as 12:00 AM</h3>
+              <h2>História</h2>
+              <h2>MARCO DIEGO</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section_atualizacao" id="section">
+        <img src="imagens/notas_adesivas.jpg" alt="seis notas adesivas brancas">
+        
+        <div class="titlle">
+          <div class="Rectangle_01"><h3>Últimas Atualizações</h3></div>
+        </div>
+        
+        <p>A semana de avaliações iniciará dia tal...</p>
+        
+        <div class="date_calendar">
+          <div class="calendar">
+          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="32" viewBox="0 0 27 32" fill="none">
+          <path d="M21.2786 5.26398H5.59962C4.36259 5.26398 3.35977 6.44236 3.35977 7.89598V26.32C3.35977 27.7736 4.36259 28.952 5.59962 28.952H21.2786C22.5156 28.952 23.5184 27.7736 23.5184 26.32V7.89598C23.5184 6.44236 22.5156 5.26398 21.2786 5.26398Z" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17.9188 2.63202V7.89602" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8.95941 2.63202V7.89602" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3.35977 13.16H23.5184" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8.95941 18.424H8.97061" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13.4391 18.424H13.4503" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17.9188 18.424H17.93" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8.95941 23.688H8.97061" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13.4391 23.688H13.4503" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M17.9188 23.688H17.93" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg></div>
+          <h5>Data de publicação: 17/08/2023</h5>
+        </div>
+
+        <a class="View_more" href="#">Ver mais</a>
+      </section>
+
+        <div class="section">
+          <img src="imagens/Logo-SistemaDeEnsino.png" alt="">
+        </div>
+    </main>
+    
+    <!-- main js -->
+    <script src="main.js"></script>
+
+</body>
+</html>
