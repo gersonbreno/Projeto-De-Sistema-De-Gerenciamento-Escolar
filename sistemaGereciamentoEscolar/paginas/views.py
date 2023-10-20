@@ -95,7 +95,8 @@ class HomeView(TemplateView):
         usuario = self.request.user
 
         # Passe o nome do usuário no contexto
-        context['nome_usuario'] = usuario.username  # Use 'username' para obter o nome do usuário
+        # Use 'username' para obter o nome do usuário
+        context['nome_usuario'] = usuario.username
 
         return context
 
@@ -104,7 +105,6 @@ class HomefuncionarioView(TemplateView):
     template_name = 'homefuncionario.html'
 # aqui sao sao os rederecionamentos
 
-
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
@@ -112,9 +112,11 @@ class HomefuncionarioView(TemplateView):
         usuario = self.request.user
 
         # Passe o nome do usuário no contexto
-        context['nome_usuario'] = usuario.username  # Use 'username' para obter o nome do usuário
+        # Use 'username' para obter o nome do usuário
+        context['nome_usuario'] = usuario.username
 
         return context
+
 
 def redirecionar_login(request):
     return redirect('login_student')
