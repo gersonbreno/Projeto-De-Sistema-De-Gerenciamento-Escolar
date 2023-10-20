@@ -166,6 +166,19 @@ flex-shrink: 0;
     gap: 6px;
 }
 
+.input_3{
+    width: 384px;
+
+    position: absolute;
+    top: 522px;
+    left: 637px;
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
 .input_1 p{
     color: #0F172A;
     font-family: Inter;
@@ -184,7 +197,7 @@ flex-shrink: 0;
     line-height: 20px; /* 142.857% */
 }
 
-.help p{
+.help a{
     position: absolute;
     top: 522px;
     left: 637px;
@@ -200,7 +213,7 @@ flex-shrink: 0;
     line-height: normal;
 }
 
-.cadastrar p{
+.cadastrar a{
     position: absolute;
     top: 629px;
     left: 637px;
@@ -214,6 +227,30 @@ flex-shrink: 0;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.button_register{
+    position: absolute;
+    top: 601px;
+    left: 637px;
+
+    display: flex;
+    width: 384px;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 6px;
+    background: #84B026;
+
+    color: var(--cor-4, #000);
+
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
 }
 
 input{
@@ -951,13 +988,18 @@ span{
     line-height: 24px; 
 }
 
+#Continue_02{
+    position: absolute;
+    top: 800px;
+}
+
 /* Cadastro de Funcionario */
 .register #employee .titlle{
     width: 338px;
 }
 
 #register_employee{
-    height: 950px;
+    height: 1000px;
 }
 
 #employee .name{
@@ -995,7 +1037,7 @@ span{
 }
 
 #employee .information{
-    height: 813px;
+    height: 900px;
 }
 
 /* Tela Inicial do Funcionario */
@@ -1293,26 +1335,26 @@ span{
 .access_01{
     position: absolute;
     top: 127px;
-    left: 71px;
+    left: 110px;
 }
 
 .access_02{
     position: absolute;
     top: 127px;
-    left: 642px;
+    left: 682px;
 }
 
 .access_03{
     position: absolute;
     top: 339px;
-    left: 71px;
+    left: 110px;
     margin-top: 52px;
 }
 
 .access_04{
     position: absolute;
     top: 339px;
-    left: 642px;
+    left: 682px;
     margin-top: 52px;
 }
 
@@ -1407,3 +1449,4 @@ span{
     top: 140px;
     left: 508px;
 }
+

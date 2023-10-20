@@ -31,7 +31,8 @@ urlpatterns = [
     path('custom_logout/', CustomLogoutView.as_view(), name='custom_logout'),
     path('salvar_funcionario/', views.salvar_funcionario,
          name='salvar_funcionario'),
-          path('salvar_aluno/', views.salvar_aluno, name='salvar_aluno'),
+    path('salvar_aluno/', views.salvar_aluno, name='salvar_aluno'),
+    path('confirmacao/', views.pagina_de_confirmacao, name='confirmacao'),
 
 
 ]

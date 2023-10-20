@@ -21,7 +21,7 @@ def cadastrar_aluno(request):
         if form.is_valid():
             novo_aluno = form.save()
             # Redirecione para uma página de confirmação ou outra página relevante
-            return redirect('pagina_de_confirmacao')
+            return redirect('confirmacao')
     else:
         form = AlunoForm()
 
@@ -139,26 +139,18 @@ def salvar_funcionario(request):
     return render(request, 'RegisterFuncionario.html', {'form': form})
 
 
-def salvar_aluno(request):
+def salvar_aluno( request):
     if request.method == 'POST':
-        # Use o formulário personalizado se você tiver um
         form = AlunoForm(request.POST)
         if form.is_valid():
-            # Crie uma instância do Aluno e preencha os campos específicos do aluno
-            aluno = Usuario(user=request.user,  # Supondo que você tem um usuário autenticado
-                            cpf=form.cleaned_data['cpf'],
-                            endereco=form.cleaned_data['endereco'],
-                            telefone=form.cleaned_data['telefone'],
-                            email=form.cleaned_data['email'],
-                            data_nascimento=form.cleaned_data['data_nascimento'],
-                            genero=form.cleaned_data['genero'])
-
-            # Salve o aluno no banco de dados
-            aluno.save()
-
-            # Redirecione para a página de sucesso ou outra página desejada
-            return redirect('sucesso')
+            form.save()
+            # Redirecionar para a página de confirmação
+            return redirect('confirmacao')
     else:
-        form = AlunoForm()  # Use o formulário personalizado se você tiver um
+        form = AlunoForm()
 
     return render(request, 'registerStudent.html', {'form': form})
+
+
+def pagina_de_confirmacao(request):
+    return render(request, 'pagina_de_confirmacao.html')
