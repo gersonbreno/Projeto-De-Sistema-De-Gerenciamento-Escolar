@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Aluno, Usuario, Funcionario
+from .models import Aluno, Usuario, Funcionario, Mensalidade, Alimentacao
 
 
 class UsuarioAdmin(admin.ModelAdmin):
@@ -17,6 +17,17 @@ class FuncionarioAdmin(admin.ModelAdmin):
                     'data_nascimento', 'genero', 'cargo', 'salario']
 
 
+class MensalidadeAdmin(admin.ModelAdmin):
+    list_display = ['id', 'valor', 'aluno']
+
+
+class AlimentacaoAdmin(admin.ModelAdmin):
+    list_display = ['id', 'cardapio', 'fornecedor', 'estoque']
+
+
 admin.site.register(Usuario, UsuarioAdmin)
 admin.site.register(Aluno, AlunoAdmin)
 admin.site.register(Funcionario, FuncionarioAdmin)
+admin.site.register(Alimentacao, AlimentacaoAdmin)
+
+admin.site.register(Mensalidade, MensalidadeAdmin)

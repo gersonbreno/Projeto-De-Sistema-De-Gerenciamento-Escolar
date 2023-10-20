@@ -29,3 +29,14 @@ class Aluno(Usuario):
 class Funcionario(Usuario):
     cargo = models.CharField(max_length=100)
     salario = models.DecimalField(max_digits=10, decimal_places=2)
+
+
+class Mensalidade(models.Model):
+    valor = models.DecimalField(max_digits=10, decimal_places=2)
+    aluno = models.ForeignKey(Aluno, on_delete=models.CASCADE)
+
+
+class Alimentacao(models.Model):
+    cardapio = models.TextField()
+    fornecedor = models.CharField(max_length=100)
+    estoque = models.PositiveIntegerField()

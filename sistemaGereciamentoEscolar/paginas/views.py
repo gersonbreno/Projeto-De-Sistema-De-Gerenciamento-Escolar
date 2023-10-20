@@ -88,11 +88,33 @@ def login_funcionario(request):
 class HomeView(TemplateView):
     template_name = 'home.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        # Recupere o usuário logado (assumindo que o usuário está autenticado)
+        usuario = self.request.user
+
+        # Passe o nome do usuário no contexto
+        context['nome_usuario'] = usuario.username  # Use 'username' para obter o nome do usuário
+
+        return context
+
 
 class HomefuncionarioView(TemplateView):
     template_name = 'homefuncionario.html'
 # aqui sao sao os rederecionamentos
 
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        # Recupere o usuário logado (assumindo que o usuário está autenticado)
+        usuario = self.request.user
+
+        # Passe o nome do usuário no contexto
+        context['nome_usuario'] = usuario.username  # Use 'username' para obter o nome do usuário
+
+        return context
 
 def redirecionar_login(request):
     return redirect('login_student')
@@ -139,7 +161,7 @@ def salvar_funcionario(request):
     return render(request, 'RegisterFuncionario.html', {'form': form})
 
 
-def salvar_aluno( request):
+def salvar_aluno(request):
     if request.method == 'POST':
         form = AlunoForm(request.POST)
         if form.is_valid():
