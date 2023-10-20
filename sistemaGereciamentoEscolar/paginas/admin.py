@@ -3,7 +3,7 @@ from .models import Aluno, Usuario, Funcionario, Mensalidade, Alimentacao
 
 
 class UsuarioAdmin(admin.ModelAdmin):
-    list_display = ['user', 'cpf', 'endereco',
+    list_display = ['nome', 'user', 'cpf', 'endereco',
                     'telefone', 'data_nascimento', 'genero']
 
 
@@ -19,6 +19,9 @@ class FuncionarioAdmin(admin.ModelAdmin):
 
 class MensalidadeAdmin(admin.ModelAdmin):
     list_display = ['id', 'valor', 'aluno']
+
+    def aluno_nome(self, obj):
+        return obj.aluno.nome
 
 
 class AlimentacaoAdmin(admin.ModelAdmin):
